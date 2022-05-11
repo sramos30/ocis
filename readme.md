@@ -27,6 +27,7 @@ Stay tuned, spread the great news and happy testing!
     git clone --recursive git@github.com:sramos30/ocis.git
 
 ## Branches
+  * master
     acc
     accounts-cs3-users-repo
     add-access-log
@@ -67,7 +68,6 @@ Stay tuned, spread the great news and happy testing!
     konnectd-demo-theme
     login-cli
     make_reva_ocis_service_user_uuid_configurable
-    master
     micro-auth-registry
     no-additional-init
     ocis-reva-registry
