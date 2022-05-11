@@ -1,0 +1,8 @@
+{
+  "ignores": [
+    "web-runtime",
+    "easygettext",
+    "webfontloader",
+    "vue-inline-svg"
+  ]
+}

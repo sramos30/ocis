@@ -1,0 +1,5 @@
+export { ActorsEnvironment } from './actor'
+export { FilesEnvironment } from './file'
+export { LinksEnvironment } from './link'
+export { SpacesEnvironment } from './space'
+export { UsersEnvironment } from './user'

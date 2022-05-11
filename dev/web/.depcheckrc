@@ -1,0 +1,8 @@
+{
+  "ignores": [
+    "core-js",
+    "requirejs",
+    "@babel/polyfill",
+    "@babel/register"
+  ]
+}

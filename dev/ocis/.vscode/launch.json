@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "oCIS server",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/ocis/cmd/ocis",
+            "args": [
+                "server"
+            ],
+            "env": {
+                // log settings for human developers
+                "OCIS_LOG_LEVEL": "debug",
+                "OCIS_LOG_PRETTY": "true",
+                "OCIS_LOG_COLOR": "true",
+                // enable basic auth for dev setup so that we can use curl for testing
+                "PROXY_ENABLE_BASIC_AUTH": "true",
+                // set insecure options because we don't have valid certificates in dev environments
+                "OCIS_INSECURE": "true",
+                // OCIS_RUN_EXTENSIONS allows to start a subset of extensions even in the supervised mode
+                //"OCIS_RUN_EXTENSIONS": "settings,storage-metadata,glauth,graph,graph-explorer,idp,ocs,store,thumbnails,web,webdav,storage-frontend,storage-gateway,storage-userprovider,storage-groupprovider,storage-authbasic,storage-authbearer,storage-authmachine,storage-users,storage-shares,storage-public-link,storage-appprovider,storage-sharing,accounts,proxy",
+            }
+        }
+    ]
+}

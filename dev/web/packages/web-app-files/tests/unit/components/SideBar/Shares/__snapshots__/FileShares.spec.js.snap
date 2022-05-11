@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileShares if currentUser can not share initially renders no share permission message 1`] = `
+<div id="oc-files-sharing-sidebar" class="oc-position-relative">
+  <p data-testid="files-collaborators-no-reshare-permissions-message">You don't have permission to share this file.</p>
+  <!---->
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`FileShares if currentUser can share initially renders add people dialog 1`] = `
+<div id="oc-files-sharing-sidebar" class="oc-position-relative">
+  <invite-collaborator-form-stub class="oc-my-s"></invite-collaborator-form-stub>
+  <!---->
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`FileShares if there are collaborators present correctly passes the shared parent route to the collaborator list item 1`] = `
+<div id="oc-files-sharing-sidebar" class="oc-position-relative">
+  <invite-collaborator-form-stub class="oc-my-s"></invite-collaborator-form-stub>
+  <div class="avatars-wrapper oc-flex oc-flex-middle oc-flex-between">
+    <h4 class="oc-text-initial oc-text-bold oc-my-rm">Shared with</h4>
+    <oc-button-stub type="button" size="medium" arialabel="Collapse list of invited people" submit="button" variation="passive" appearance="raw" justifycontent="center" gapsize="medium" data-testid="collaborators-show-people">
+      <oc-icon-stub name="arrow-up-s" filltype="fill" accessiblelabel="" type="span" size="medium" variation="passive" color=""></oc-icon-stub>
+    </oc-button-stub>
+  </div>
+  <ul id="files-collaborators-list" aria-label="Share receivers" class="oc-list oc-list-divider oc-overflow-hidden oc-m-rm">
+    <li>
+      <collaborator-list-item-stub share="[object Object]" sharedparentroute="[object Object]"></collaborator-list-item-stub>
+    </li>
+  </ul>
+  <!---->
+</div>
+`;
+
+exports[`FileShares if there are collaborators present renders sharedWithLabel and sharee list 1`] = `
+<div id="oc-files-sharing-sidebar" class="oc-position-relative">
+  <invite-collaborator-form-stub class="oc-my-s"></invite-collaborator-form-stub>
+  <div class="avatars-wrapper oc-flex oc-flex-middle oc-flex-between">
+    <h4 class="oc-text-initial oc-text-bold oc-my-rm">Shared with</h4>
+    <oc-button-stub type="button" size="medium" arialabel="Collapse list of invited people" submit="button" variation="passive" appearance="raw" justifycontent="center" gapsize="medium" data-testid="collaborators-show-people">
+      <oc-icon-stub name="arrow-up-s" filltype="fill" accessiblelabel="" type="span" size="medium" variation="passive" color=""></oc-icon-stub>
+    </oc-button-stub>
+  </div>
+  <ul id="files-collaborators-list" aria-label="Share receivers" class="oc-list oc-list-divider oc-overflow-hidden oc-m-rm">
+    <li>
+      <collaborator-list-item-stub share="[object Object]" modifiable="true"></collaborator-list-item-stub>
+    </li>
+    <li>
+      <collaborator-list-item-stub share="[object Object]" modifiable="true"></collaborator-list-item-stub>
+    </li>
+  </ul>
+  <!---->
+</div>
+`;
+
+exports[`FileShares if there are no collaborators does not render avatar wrapper or collaborator list 1`] = `
+<div id="oc-files-sharing-sidebar" class="oc-position-relative">
+  <invite-collaborator-form-stub class="oc-my-s"></invite-collaborator-form-stub>
+  <!---->
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`FileShares renders loading spinner while loading 1`] = `
+<div id="oc-files-sharing-sidebar" class="oc-position-relative">
+  <oc-loader-stub arialabel="Loading people list"></oc-loader-stub>
+</div>
+`;

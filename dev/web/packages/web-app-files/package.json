@@ -1,0 +1,10 @@
+{
+  "name": "files",
+  "version": "0.0.0",
+  "description": "ownCloud web files",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "copy-to-clipboard": "^3.3.1",
+    "vue2-dropzone": "^3.6.0"
+  }
+}

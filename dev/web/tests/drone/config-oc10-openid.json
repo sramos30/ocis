@@ -1,0 +1,23 @@
+{
+  "server": "http://owncloud/",
+  "theme": "http://owncloud/themes/owncloud/theme.json",
+  "version": "0.1.0",
+  "openIdConnect": {
+    "metadata_url": "https://idp:9130/.well-known/openid-configuration",
+    "authority": "https://idp:9130",
+    "client_id": "web",
+    "response_type": "code",
+    "scope": "openid profile email"
+  },
+  "options": {
+    "displayResourcesLazy": false
+  },
+  "apps": [
+    "files",
+    "draw-io",
+    "markdown-editor",
+    "media-viewer",
+    "pdf-viewer",
+    "search"
+  ]
+}

@@ -1,0 +1,5 @@
+## [server repository](https://github.com/owncloud/ocis)
+## [ownCloud Desktop Syncing Client](https://github.com/owncloud/client)
+## [ownCloud Web client](https://github.com/owncloud/web)
+## [clients for iOS](https://github.com/owncloud/ios-app)
+## [clients for Android](https://github.com/owncloud/android)
