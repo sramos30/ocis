@@ -9,6 +9,32 @@ Get a free 14-day ready-go instance managed by ownCloud for testing purposes. Mo
 We are looking forward to any feedback you might want to share. Please see the guidelines on how to provide feedback below.
 Stay tuned, spread the great news and happy testing!
 
+## Run ownCloud Infinite Scale
+
+Please see [Getting Started](https://owncloud.dev/ocis/getting-started/)
+
+## Development
+
+Please see [Development - Getting Started](https://owncloud.dev/ocis/development/getting-started/)
+
+## Security
+
+If you find a security issue please contact [security@owncloud.com](mailto:security@owncloud.com) first
+
+## Contributing
+
+Please refer to our [Contribution Guidelines](CONTRIBUTING.md).
+
+## License
+
+Apache-2.0
+
+## Copyright
+
+```console
+Copyright (c) 2020-2021 ownCloud GmbH <https://owncloud.com>
+```
+
 ## [Infinite Scale - A new era for ownCloud - ownCloud Conference 2021](https://youtu.be/C4a4q9IGyFQ)
 
 ## [Infinite Scale Documentation](https://doc.owncloud.com/ocis/next/)
@@ -27,7 +53,7 @@ Stay tuned, spread the great news and happy testing!
     git clone --recursive git@github.com:sramos30/ocis.git
 
 ## Branches
-  * master
+    master *
     acc
     accounts-cs3-users-repo
     add-access-log
@@ -100,3 +126,37 @@ Stay tuned, spread the great news and happy testing!
     upgrade_deps
     uploadToShare-tusTests
     z-delete-user-home
+
+> ./switch_branch.sh master
+
+### Build the oCIS binary
+
+You only need to run following command if you have changed protobuf definitions or the frontend part in one of the extensions. Run the command in the root directory of the repository. Otherwise you can skip this step and proceed to build the oCIS binary. This will usually modify multiple embed.go files because we embed the frontend build output in these embed.go files and a timestamp will be updated and also minor differences are expected between different Node.js versions.
+
+    make generate
+
+The next step is to build the actual oCIS binary. Therefore you need to navigate to the subdirectory ocis and start the build process.
+
+    cd ocis
+    make build
+
+After the build process finished, you can find the binary within the bin/ folder (in ocis/bin relative to the oCIS repository root folder).
+
+Try to run it: *./bin/ocis h*
+
+### Build a local oCIS docker image
+
+If you are developing and want to run your local changes in a docker or docker-compose setup, you have to build an image locally.
+
+Therefore run following commands in the root of the oCIS repository:
+
+    docker build -t owncloud/ocis:dev .
+
+To connect to a container with bash shell...
+
+    docker exec -it owncloud/ocis:dev /bin/bash
+
+Then you can test as usual via
+
+    docker run --rm -ti owncloud/ocis:dev
+
