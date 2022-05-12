@@ -41,11 +41,6 @@ fi
 
 GIT_PROJECT="$(<./git_project.txt)" 2> /dev/null
 
-if [ ! -d "repository" ];
-then
-    git clone ${GIT_PROJECT} repository
-fi
-
 BRANCH_NAME=""
 ACTION=""
 
@@ -73,6 +68,11 @@ fi
 if [ -z $BRANCH_NAME ];
 then
     usage
+fi
+
+if [ ! -d "repository" ];
+then
+    git clone ${GIT_PROJECT} -b ${BRANCH_NAME} repository
 fi
 
 if [ "${ACTION}" == "switch" ];

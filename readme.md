@@ -148,15 +148,10 @@ Try to run it: *./bin/ocis h*
 
 If you are developing and want to run your local changes in a docker or docker-compose setup, you have to build an image locally.
 
-Therefore run following commands in the root of the oCIS repository:
+Therefore run following commands in the ocis folder of the oCIS repository:
 
-    docker build -t owncloud/ocis:dev .
+    docker build -f docker/Dockerfile.linux.amd64 -t owncloud/ocis:dev .
 
-To connect to a container with bash shell...
-
-    docker exec -it owncloud/ocis:dev /bin/bash
-
-Then you can test as usual via
-
-    docker run --rm -ti owncloud/ocis:dev
+    docker run --rm -it -v ./ocis/ocis-config:/etc/ocis owncloud/ocis:dev init
+    docker run --rm -p 9200:9200 -v ./ocis-config:/etc/ocis -v ./ocis-data:/var/lib/ocis -e IDM_CREATE_DEMO_USERS=false owncloud/ocis:dev
 
